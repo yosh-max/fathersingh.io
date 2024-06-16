@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Father's Day Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        .upload-section, .gallery-section {
+            margin-bottom: 2rem;
+        }
+
+        button {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #333;
+            border-radius: 5px;
+        }
+
+        .counter {
+            font-size: 1rem;
+            color: white;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Happy Father's Day!</h1>
+        <div class="counter" id="counter"></div>
+    </header>
+    <main>
+            </form>
+        </section>
+        <section class="gallery-section">
+            <h2>Boys Gallery</h2>
+            <div id="gallery" class="gallery">
+                <!-- Preloaded images -->
+                <ttps://scontent-man2-1.xx.fbcdn.net/v/t1.18169-9/13331073_10153465944287331_4193800090637293820_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=b7WOt6orb48Q7kNvgEszW8H&_nc_ht=scontent-man2-1.xx&oh=00_AYAr1wCaHMC3osFoXFtTWi3elwEBl9cPzZobMStyU25oHw&oe=6695A171"Image 1">
+                <img src="https://scontent-man2-1.xx.fbcdn.net/v/t1.18169-9/12798840_10153279724587331_6201765583084134987_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=KL1Vw6_V4RoQ7kNvgG-g3gT&_nc_ht=scontent-man2-1.xx&oh=00_AYCH04oIGzOZ76veO6DZ0djgR1MUSYyyyjamkMpgZlR2PQ&oe=6695919D" alt="Image 2">
+                <img src="https://scontent-man2-1.xx.fbcdn.net/v/t31.18172-8/10272510_10152013405257331_854436297116934949_o.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Z8mX_YKTNEQQ7kNvgHDk6uj&_nc_ht=scontent-man2-1.xx&oh=00_AYAc4HhdUIkGFFusVSkUpVAbUBqHk05f6p8LXkcuAvhfTw&oe=669584F2"Image 3">
+                <img src="https://scontent-man2-1.xx.fbcdn.net/v/t1.18169-9/550979_10151499884817331_1537496002_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=9GTCXQJ7xvYQ7kNvgFMeXS5&_nc_ht=scontent-man2-1.xx&oh=00_AYAdzL7qpYGXQBSSAkf3IBBt-6CnKvxfehfDfnVRHSgYOw&oe=6695A958" alt="Example Image 4">
+                <img src="https://scontent-man2-1.xx.fbcdn.net/v/t1.18169-9/228476_10150159608842331_2294608_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=o2xOIeG2uh0Q7kNvgEtGWPA&_nc_ht=scontent-man2-1.xx&oh=00_AYACUggcFeqlPEoaYjJ9X5ZFxvgXIfOkM8UqWkmhS2eRsg&oe=6695921A" alt="Image 5">
+                 <img src="https://scontent-man2-1.xx.fbcdn.net/v/t1.18169-9/13331073_10153465944287331_4193800090637293820_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=b7WOt6orb48Q7kNvgEszW8H&_nc_ht=scontent-man2-1.xx&oh=00_AYAr1wCaHMC3osFoXFtTWi3elwEBl9cPzZobMStyU25oHw&oe=6695A171" alt="Image 6">
+            </div>
+        </section>
+    </main>
+    <script>
+        function updateCounter() {
+            const startDate = new Date('October 30, 2004 06:00:00');
+            const now = new Date();
+            const diff = now - startDate;
+
+            const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+            const days = Math.floor((diff % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('counter').innerText = 
+                `${years} years, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+        }
+
+        updateCounter();
+        setInterval(updateCounter, 1000);
+
+        document.getElementById('uploadForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const imageInput = document.getElementById('imageInput');
+            const gallery = document.getElementById('gallery');
+
+            if (imageInput.files) {
+                Array.from(imageInput.files).forEach(file => {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        const img = document.createElement('img');
+                        img.src = e.target.result;
+                        gallery.appendChild(img);
+                    };
+                    reader.readAsDataURL(file);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
